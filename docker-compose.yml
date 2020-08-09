@@ -24,14 +24,14 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "3306:3306"
+      - "4306:3306"
     volumes:
       - ./mysql:/var/lib/mysql
     environment:
       MYSQL_DATABASE: e_global_zone
-      MYSQL_USER: root
-      MYSQL_PASSWORD: bok2019
-      MYSQL_ROOT_PASSWORD: bok2019
+      MYSQL_USER: yju_IAC_ADMIN
+      MYSQL_PASSWORD: yju_IAC_5630
+      MYSQL_ROOT_PASSWORD: yju_IAC_5630
       SERVICE_TAGS: dev
       # SERVICE_TAGS: service
       SERVICE_NAME: mysql

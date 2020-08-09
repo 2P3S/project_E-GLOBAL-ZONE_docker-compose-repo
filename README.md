@@ -4,8 +4,8 @@
 
 1. Clone docker-compose File 
 
-    ```git
-    git clone https://github.com/JeongJaeSoon/e-global-zone_Docker.git
+    ```bash
+    $ git clone https://github.com/JeongJaeSoon/e-global-zone_Docker.git
     ```
 
 2. Directory cleanup & docker-compose build / up
@@ -15,17 +15,24 @@
     $ docker-compose build && docker-compose up -d
     ```
     
-3. Clone E_Global_Zone Laravel Project to `src`
+3. Check Nginx Server Status
     
-    ```git
-    git clone https://github.com/JeongJaeSoon/e-global-zone_Laravel-project_Project-management.git
+4. Clone E_Global_Zone Laravel Project to `src`
+    
+    ```bash
+    $ rm -r src/E_Global_Zone
+    $ git clone https://github.com/JeongJaeSoon/e-global-zone_Laravel-project_Project-management.git
+    $ mv e-global-zone_Laravel-project_Project-management/E_Global_Zone src
+    $ rm -rf e-global-zone_Laravel-project_Project-management
     ```
    
-4. Deployment Laravel Project
+5. Deployment Laravel Project
 
     ```bash
-    $ cd src
+    $ cd src/E_Global_Zone
     $ composer install
-    $ cp .env.example .env 
+    $ cp .env.example .env          // modify .env DB setting
     $ php artisan key:generate
+    $ docker-compose exec php php /var/www/html/E_Global_Zone/artisan migrate
+    $ docker-compose exec php php /var/www/html/E_Global_Zone/artisan passport:install
     ```
