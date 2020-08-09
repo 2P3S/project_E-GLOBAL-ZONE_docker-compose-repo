@@ -1,2 +1,3 @@
 <?php
-echo "<h2>test!!!</h2>";
+
+echo "<h1>E Global Zone Docker is works!!!!</h1>";
