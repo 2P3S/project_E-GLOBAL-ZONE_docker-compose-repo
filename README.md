@@ -44,7 +44,7 @@
     $ php artisan key:generate
     $ docker exec -it php php /var/www/html/E_Global_Zone/artisan migrate
     $ docker exec -it php php /var/www/html/E_Global_Zone/artisan passport:install
-    $ docker exec -it php chown -R www-data:www-data /var/www/html/E_Global_Zone
+    $ docker exec -it php chown -R www-data:www-data /var/www/html/E_Global_Zone/public /var/www/html/E_Global_Zone/storage
     ```
    
 8. Run & Check Laravel scheduler crontab
