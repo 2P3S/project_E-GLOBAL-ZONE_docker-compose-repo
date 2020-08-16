@@ -18,7 +18,7 @@
     
 3. Check Nginx Server Status
     
-4. <del>Clone E_Global_Zone Laravel Project to `src`</del>
+4. Clone E_Global_Zone Laravel Project to `src`
     
     ```bash
     $ rm -r src/E_Global_Zone
