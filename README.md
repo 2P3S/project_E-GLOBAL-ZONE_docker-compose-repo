@@ -35,9 +35,11 @@
     $ composer install
     $ cp .env.example .env
     ```
-    ```
-    modify .env DB setting
-    ```
+   
+6. modify .env DB setting
+
+7. Set up Laravel Project
+    
     ```
     $ php artisan key:generate
     $ docker exec -it php php /var/www/html/E_Global_Zone/artisan migrate
@@ -45,9 +47,10 @@
     $ docker exec -it php chown -R www-data:www-data /var/www/html/E_Global_Zone
     ```
    
-6. Run Laravel scheduler crontab
+8. Run & Check Laravel scheduler crontab
 
     ```bash
     $ docker exec -it php /usr/sbin/crond
+    $ docker exec -it php ps
     ```
    
