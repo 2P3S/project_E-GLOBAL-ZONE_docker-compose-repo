@@ -12,7 +12,7 @@
 
     ```bash
     $ cd e-global-zone_Docker
-    $ rm -rf ./mysql/*
+    $ mkdir mysql
     $ docker-compose build && docker-compose up -d
     ```
     
