@@ -16,8 +16,9 @@
     $ docker-compose build && docker-compose up -d
     ```
     
-3. Check Nginx Server Status
-    
+3. Check Nginx Server Status (localhost:8888)
+    <img src="https://user-images.githubusercontent.com/53788601/90328235-d7d04480-dfd5-11ea-8863-a0efcd0b9fd9.png"/>
+
 4. Clone E_Global_Zone Laravel Project to `src`
     
     ```bash
@@ -38,7 +39,7 @@
     modify .env DB setting
     ```
     ```
-    $ docker-compose exec php php /var/www/html/E_Global_Zone/artisan key:generate
+    $ php artisan key:generate
     $ docker-compose exec php php /var/www/html/E_Global_Zone/artisan migrate
     $ docker-compose exec php php /var/www/html/E_Global_Zone/artisan passport:install
     $ docker-compose exec php chown -R www-data:www-data /var/www/html/E_Global_Zone
