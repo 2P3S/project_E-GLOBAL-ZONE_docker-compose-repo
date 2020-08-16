@@ -44,3 +44,11 @@
     $ docker-compose exec php php /var/www/html/E_Global_Zone/artisan passport:install
     $ docker-compose exec php chown -R www-data:www-data /var/www/html/E_Global_Zone
     ```
+   
+6. Add Crontab entries Register (Laravel scheduler)
+
+    **Run from docker directory**
+ 
+    ```bash
+    $ docker-compose exec php php /var/www/html/E_Global_Zone/artisan schedule:run
+    ```

@@ -12,6 +12,8 @@ services:
     volumes:
       - ./src:/var/www/html
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    environment:
+      TZ: "Asia/Seoul"
     depends_on:
       - php
       - mysql
@@ -35,6 +37,7 @@ services:
       SERVICE_TAGS: dev
       # SERVICE_TAGS: service
       SERVICE_NAME: mysql
+      TZ: "Asia/Seoul"
     networks:
       - laravel
 
@@ -45,6 +48,8 @@ services:
     container_name: php
     volumes:
       - ./src:/var/www/html
+    environment:
+      TZ: "Asia/Seoul"
     ports:
       - "9000:9000"
     networks:
