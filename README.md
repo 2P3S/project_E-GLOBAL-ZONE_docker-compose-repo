@@ -40,15 +40,14 @@
     ```
     ```
     $ php artisan key:generate
-    $ docker-compose exec php php /var/www/html/E_Global_Zone/artisan migrate
-    $ docker-compose exec php php /var/www/html/E_Global_Zone/artisan passport:install
-    $ docker-compose exec php chown -R www-data:www-data /var/www/html/E_Global_Zone
+    $ docker exec -it php php /var/www/html/E_Global_Zone/artisan migrate
+    $ docker exec -it php php /var/www/html/E_Global_Zone/artisan passport:install
+    $ docker exec -it php chown -R www-data:www-data /var/www/html/E_Global_Zone
     ```
    
-6. Add Crontab entries Register (Laravel scheduler)
+6. Run Laravel scheduler crontab
 
-    **Run from docker directory**
- 
     ```bash
-    $ docker-compose exec php php /var/www/html/E_Global_Zone/artisan schedule:run
+    $ docker exec -it php /usr/sbin/crond
     ```
+   
