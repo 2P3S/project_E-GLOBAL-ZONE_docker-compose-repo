@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 networks:
   laravel:
@@ -31,11 +31,11 @@ services:
       - ./mysql:/var/lib/mysql
     environment:
       MYSQL_DATABASE: e_global_zone
-      MYSQL_USER: yju_IAC_ADMIN
-      MYSQL_PASSWORD: yju_IAC_5630
-      MYSQL_ROOT_PASSWORD: yju_IAC_5630
-      SERVICE_TAGS: dev
-      # SERVICE_TAGS: service
+      MYSQL_USER: oic_yju
+      MYSQL_PASSWORD: oic_yju
+      MYSQL_ROOT_PASSWORD: oic_yju
+      # SERVICE_TAGS: dev
+      SERVICE_TAGS: service
       SERVICE_NAME: mysql
       TZ: "Asia/Seoul"
     networks:
