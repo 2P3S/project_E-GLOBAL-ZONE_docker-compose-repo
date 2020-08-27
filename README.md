@@ -23,7 +23,7 @@
     
     ```bash
     $ rm -r src/E_Global_Zone
-    $ git clone -b server-laravel https://github.com/JeongJaeSoon/e-global-zone_Laravel-project_Project-management.git
+    $ git clone https://github.com/JeongJaeSoon/E_Global_Zone-laravel_distributor.git
     $ mv e-global-zone_Laravel-project_Project-management/E_Global_Zone src
     $ rm -rf e-global-zone_Laravel-project_Project-management
     ```
