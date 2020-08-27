@@ -50,7 +50,7 @@
 8. Run & Check Laravel scheduler crontab
 
     ```bash
-    $ docker exec -it php /usr/sbin/crond
+    $ docker exec -it php /usr/sbin/crond -f
     $ docker exec -it php ps
     ```
    
