@@ -24,8 +24,8 @@
     ```bash
     $ rm -r src/E_Global_Zone
     $ git clone https://github.com/JeongJaeSoon/E_Global_Zone-laravel_distributor.git
-    $ mv e-global-zone_Laravel-project_Project-management/E_Global_Zone src
-    $ rm -rf e-global-zone_Laravel-project_Project-management
+    $ cp -r E_Global_Zone-laravel_distributor src/E_Global_Zone
+    $ rm -rf E_Global_Zone-laravel_distributor
     ```
    
 5. Deployment Laravel Project
